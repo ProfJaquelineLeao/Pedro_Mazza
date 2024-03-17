@@ -1,0 +1,31 @@
+h2 {
+    color: orange;
+}
+
+body {
+    background-color: lightblue;
+    color: darkblue;
+    font-family: Arial;
+    text-align: center;
+}
+
+header {
+    border-bottom: 1px solid darkblue;
+    clear: left; 
+}
+
+.logo {
+    float:center;
+}
+
+footer {
+    border-top: 1px solid darkblue;
+}
+
+p {
+    font-weight: bold;
+}
+
+span {
+    font-style: italic;
+}
