@@ -10,18 +10,47 @@
         .logo {
             float: left;
         }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
     </style>
 </head>
 
 <body>
     <img className="logo" width="180" height="210"
-    src="C:\Users\Jaqueline\Desktop\PROGRAMACAO_PM_2024\IMAGENS\logo_P_MAZZA.jpg"
-    alt="imagem triangular na cor azul companhada do nome da escola Pedro Mazza">
+        src="C:\Users\Jaqueline\Desktop\PROGRAMACAO_PM_2024\IMAGENS\logo_P_MAZZA.jpg"
+        alt="imagem triangular na cor azul companhada do nome da escola Pedro Mazza">
 
     <header></header>
     
     <h1>AULA DE TECNOLOGIA </h1>
-    <p> Bem-vindos,"Estudantes"</p>
+    <p> Bem-vindos,estudantes!</p>
+    <button onclick="openModal()">Qual é sua turma?</button>
+    
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Qual é sua turma?</p>
+            <input type="text" id="turmaInput">
+            <button onclick="saveTurma()">Salvar</button>
+        </div>
+    </div>
+    
     <section>
         <h2>HTML</h2>
         <p>HTML
@@ -37,6 +66,7 @@
     <footer>
         <p> Scientia Potentia Est</p>
     </footer>
+    <script src="main.js"></script>
 </body>
 
 </html>
